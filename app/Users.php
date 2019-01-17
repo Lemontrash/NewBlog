@@ -9,5 +9,7 @@ class Users extends Model
 {
     use SoftDeletes;
     public $incrementing = false;
-
+    public function role(){
+        return $this->belongsToMany('Roles', 'User_Roles', 'User_id', 'id');
+    }
 }
