@@ -15,3 +15,15 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/signIn', function () {
+    return view('signIn');
+})->name('signIn');
+
+Route::get('/SingUp', function () {
+    return view('SignUp');
+})->name('signUp');
+
+Route::get('/ContactUs', function () {
+    return view('ContactUs');
+})->name('ContactUs');
+
