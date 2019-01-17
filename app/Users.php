@@ -3,10 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Users extends Model
 {
-    public function post(){
-        return $this->hasMany(Posts::class);
-    }
+    use SoftDeletes;
+    public $incrementing = false;
+
 }

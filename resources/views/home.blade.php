@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <h2 class="card-title">Post Title</h2>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                        <a href="{{ route('single') }}" class="btn btn-primary">Read More &rarr;</a>
                     </div>
                     <div class="card-footer text-muted">
                         Posted on January 1, 2017 by
@@ -32,7 +32,7 @@
                     <div class="card-body">
                         <h2 class="card-title">Post Title</h2>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                        <a href="{{ route('single') }}" class="btn btn-primary">Read More &rarr;</a>
                     </div>
                     <div class="card-footer text-muted">
                         Posted on January 1, 2017 by
@@ -46,7 +46,7 @@
                     <div class="card-body">
                         <h2 class="card-title">Post Title</h2>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                        <a href="{{ route('single') }}" class="btn btn-primary">Read More &rarr;</a>
                     </div>
                     <div class="card-footer text-muted">
                         Posted on January 1, 2017 by
@@ -68,6 +68,13 @@
 
             <!-- Sidebar Widgets Column -->
             <div class="col-md-4">
+                <!-- Side Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Мини ЛК</h5>
+                    <div class="card-body">
+                        Юзернейм и логаут
+                    </div>
+                </div>
                 <!-- Categories Widget -->
                 <div class="card my-4">
                     <h5 class="card-header">Топ новостей</h5>
@@ -103,13 +110,7 @@
                     </div>
                 </div>
 
-                <!-- Side Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Мини ЛК</h5>
-                    <div class="card-body">
-                        Юзернейм и логаут
-                    </div>
-                </div>
+
 
             </div>
 

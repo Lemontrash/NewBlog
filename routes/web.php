@@ -27,3 +27,7 @@ Route::get('/ContactUs', function () {
     return view('ContactUs');
 })->name('ContactUs');
 
+Route::get('/Post', function () {
+    return view('SinglePost');
+})->name('single');
+
