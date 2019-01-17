@@ -31,3 +31,7 @@ Route::get('/Post', function () {
     return view('SinglePost');
 })->name('single');
 
+
+Route::get('/Admin', function () {
+    return view('admin.home');
+})->name('admin');
