@@ -3,26 +3,34 @@
 
 
 @section('content')
-    <form method="post" action="" class="login">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    <form method="post" action="{{route('message')}}" class="login">
+        @csrf
         <p>
-            <label for="login">Email:</label>
-            <input type="text" name="login" id="login" placeholder="name@example.com">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" placeholder="name@example.com">
         </p>
 
         <p>
-            <label for="password">Имя:</label>
-            <input type="password" name="password" id="password" placeholder="">
+            <label for="name">Имя:</label>
+            <input type="text" name="name" id="name" placeholder="">
         </p>
         <p>
-            <label for="password">Сообщение:</label> <br>
-            <textarea placeholder="..."></textarea>
+            <label for="message">Сообщение:</label> <br>
+            <textarea placeholder="..." name="message" id="message"></textarea>
         </p>
         <p class="login-submit">
             <button type="submit" class="login-button">Войти</button>
         </p>
 
-
-        КАПЧА
     </form>
 @endsection
 

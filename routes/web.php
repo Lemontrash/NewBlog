@@ -31,7 +31,12 @@ Route::get('/Post', function () {
     return view('SinglePost');
 })->name('single');
 
-
 Route::get('/Admin', function () {
     return view('admin.home');
 })->name('admin');
+
+Route::post('messages', 'MessageController@store')->name('message');
+
+Route::post('signUp', 'SignUpController@store')->name('SignUp');
+
+

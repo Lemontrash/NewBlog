@@ -16,6 +16,8 @@
     <!-- Custom styles for this template -->
     <link href="css/blog-home.css" rel="stylesheet">
 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
 </head>
 
 <body>
