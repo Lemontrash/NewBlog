@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', 'PostController@show' )->name('home');
+
 
 Route::get('/signIn', function () {
     return view('signIn');
@@ -39,4 +38,11 @@ Route::post('messages', 'MessageController@store')->name('message');
 
 Route::post('signUp', 'SignUpController@store')->name('SignUp');
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home2');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+Route::post('login', '\App\Http\Controllers\Auth\LoginController@login')->name('login.post');
 

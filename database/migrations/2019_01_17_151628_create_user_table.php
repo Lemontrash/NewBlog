@@ -21,6 +21,8 @@ class CreateUserTable extends Migration
             $table->string('username', 250)->unique()->nullable()->charset('utf8');
             $table->string('password');
             $table->longText('pic')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->rememberToken()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

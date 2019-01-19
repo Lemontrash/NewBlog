@@ -35,12 +35,14 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('signIn') }}">Sign In</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('signUp') }}">Sign Up</a>
-                </li>
+                @if(!Auth::guard('web')->check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Sign Up</a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('ContactUs') }}">Contact Us</a>
                 </li>
